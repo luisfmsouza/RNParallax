@@ -15,7 +15,6 @@ const {
 } = Dimensions.get('window');
 
 const IS_IPHONE_X = SCREEN_HEIGHT === 812 || SCREEN_HEIGHT === 896;
-const STATUS_BAR_HEIGHT = Platform.OS === 'ios' ? (IS_IPHONE_X ? 44 : 20) : 0;
 const NAV_BAR_HEIGHT = Platform.OS === 'ios' ? (IS_IPHONE_X ? 88 : 64) : 64;
 
 const SCROLL_EVENT_THROTTLE = 16;
@@ -67,7 +66,6 @@ const styles = StyleSheet.create({
     top: 0,
     left: 0,
     right: 0,
-    paddingTop: STATUS_BAR_HEIGHT,
     alignItems: 'center',
     justifyContent: 'center',
   },
