@@ -269,6 +269,7 @@ class RNParallax extends Component {
     const { title, titleStyle, headerTitleStyle } = this.props;
     const titleTranslateY = this.getTitleTranslateY();
     const titleOpacity = this.getTitleOpacity();
+    const imageOpacity = this.getImageOpacity();
 
     return (
       <Animated.View
@@ -291,7 +292,7 @@ class RNParallax extends Component {
             </Text>
           )
         }
-        {typeof title !== 'string' && title}
+        {typeof title !== 'string' && title(imageOpacity)}
       </Animated.View>
     );
   }
